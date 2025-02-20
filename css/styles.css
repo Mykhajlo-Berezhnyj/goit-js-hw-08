@@ -19,7 +19,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  gap: 48px 24px;
+  gap: 20px 24px;
   max-width: 1128px;
   margin: 0 auto;
   padding: 0;
@@ -27,10 +27,25 @@ body {
 
 .gallery-item {
   flex: 1 1 calc((100% - 48px) / 3);
+  cursor: pointer;
 }
 
 .gallery-image {
   max-width: 100%;
   height: 100%;
   display: block;
+  
 }
+
+.gallery-link {
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-link:hover,
+.gallery-link:focus,
+.gallery-link:active {
+  outline:  2px solid lightgreen;
+  transform: scale(1.044);
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+ }
