@@ -126,11 +126,11 @@ function navigationModal(event) {
     return;
   }
   if ((event.key === 'ArrowLeft' ||event.key === 'ArrowDown' || event.key === 'A'|| event.key === 'a' || event.key === '4'|| event.key === "numpad4" ) ) {
-    currentIndex = (currentIndex + 1 + images.length) % images.length;
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateModalImage();
   }
   if ((event.key === 'ArrowRight' || event.key === 'ArrowUp' || event.key === '6'|| event.key === 'd' || event.key === 'D'|| event.key === "numpad6" ) ) {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    currentIndex = (currentIndex + 1 + images.length) % images.length;
     updateModalImage();
   }
 }
@@ -141,5 +141,3 @@ function updateModalImage() {
   modalImg.src = newImgUrl;
 
 }
-
-
